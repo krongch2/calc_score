@@ -39,7 +39,7 @@ def calc_score_pct(subset, structure):
     for idx in range(n):
         react = subset[idx]
         nuct = structure[idx]
-        if nuct == 'X' and react < 0.5:
+        if nuct == 'X' and react < 0.50:
             score += 1
         elif nuct == '.' and react > 0.25:
             score += 1
@@ -47,11 +47,13 @@ def calc_score_pct(subset, structure):
 
 if __name__ == '__main__':
     # input
-    reacts = read_reactivity('reacts.txt')
+    reacts = read_reactivity('reacts_1-7.txt')
     start = 24
     end = 307
     structure = read_structure('structure.txt')
 
     subset = get_subset(reacts, start, end)
-    score_pct = calc_score(subset, structure)
+    score_pct = calc_score_pct(subset, structure)
     print(score_pct)
+
+
