@@ -44,6 +44,7 @@ def calc_score_pct(subset, structure):
             score += 1
     return score/n*100
 
+# main
 if __name__ == '__main__':
     # input
     reacts = read_reactivity('reacts.txt')
