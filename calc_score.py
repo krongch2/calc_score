@@ -1,3 +1,4 @@
+# comment
 def read_structure(fn):
     with open(fn) as f:
         text = f.read()
